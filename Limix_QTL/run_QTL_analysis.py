@@ -723,11 +723,11 @@ def run_QTL_analysis(pheno_filename, anno_filename, geno_prefix, plinkGenotype, 
         time.sleep(15)
         #Safety timer to make sure the file is unlocked.
         print("Trying to remove the h5 file. Nothing has been tested.")
-        print(output_dir+'qtl_results_{}_{}_{}.h5'.format(chromosome,selectionStart,selectionEnd))
+        print(output_dir+'/qtl_results_{}_{}_{}.h5'.format(chromosome,selectionStart,selectionEnd))
         if not selectionStart is None :
-            os.remove(output_dir+'qtl_results_{}_{}_{}.h5'.format(chromosome,selectionStart,selectionEnd))
+            os.remove(output_dir+'/qtl_results_{}_{}_{}.h5'.format(chromosome,selectionStart,selectionEnd))
         else :
-            os.remove(output_dir+'qtl_results_{}.h5'.format(chromosome))
+            os.remove(output_dir+'/qtl_results_{}.h5'.format(chromosome))
         sys.exit()
     #gather unique indexes of tested SNPs
 
